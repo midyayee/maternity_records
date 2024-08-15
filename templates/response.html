@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+        text-align: center;
+        background-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        {% for key, value in result.items() %}
+
+            <p> {{ key }} : {{ value }} </p>
+
+        {% endfor %}
+    </body>
+
+</html>

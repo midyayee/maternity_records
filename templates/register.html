@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(64, 72, 64);
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        select{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head> 
+<body>
+    <h3>Register New User</h3>
+    <form action="/register" method ="POST">
+        Email <input type = "email" name = "email"/>
+        Role <select name = "role">
+            <option value = "">[Choose Role]</option>
+            <option value = "ADMIN">Admin</option>
+            <option value = "CLIENT">Client</option>
+            <option value = "CLINICAL">Clinical</option>
+            </select>
+        <input type = "submit" value = "Submit"/>
+    </form>
+    &copy; 2024 School of Programming and Software Development.
+</body>
+</html>

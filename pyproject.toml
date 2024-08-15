@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "maternity-records"
+version = "0.1.0"
+description = "Pregnancy registration and Maternity information Tracking"
+authors = ["mildredfakoya <luvlyayee@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+sqlalchemy = "^2.0.31"
+python-dotenv = "^1.0.1"
+pymysql = "^1.1.1"
+flask-simple-crypt = "^0.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
