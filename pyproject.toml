@@ -12,6 +12,7 @@ sqlalchemy = "^2.0.31"
 python-dotenv = "^1.0.1"
 pymysql = "^1.1.1"
 flask-simple-crypt = "^0.3.3"
+flask-mail = "^0.10.0"
 
 
 [build-system]

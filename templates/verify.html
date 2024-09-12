@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}
+    Verify
+{% endblock title %}
+
+{% block content %}
+<div class ="container">
+    <h3>Create Your Password </h3>
+    <form action="/confirmed" method ="POST">
+
+        New Password <input type = "password" name = "password" class ="form-control"/>
+        Confirm Password <input type = "password" name = "cpassword" class ="form-control"/>
+        <input type = "hidden" name = "code" value = "{{ code }}"/>
+        <hr/>
+        <input type = "submit" value = "Submit" class ="btn btn-info"/>
+    </form>
+</div>
+{% endblock content %}

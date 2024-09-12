@@ -1,5 +1,5 @@
 import enum
-from sqlalchemy import DateTime, Integer, String, func
+from sqlalchemy import Boolean, DateTime, Integer, String, func
 from sqlalchemy.orm import mapped_column, Mapped
 #from app import app
 from models import Base, BaseModel
@@ -16,4 +16,6 @@ class User(Base, BaseModel):
     email: Mapped[str] = mapped_column(String(255), unique=True)
     password: Mapped[str] = mapped_column(String(255))
     role:Mapped[Role]
+    code:Mapped[str] = mapped_column(String(255))
+    activated:Mapped[bool] = mapped_column(Boolean, default=False)
     created_at:Mapped[str] = mapped_column(DateTime, default=func.now())

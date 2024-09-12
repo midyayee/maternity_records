@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-            body{
-        text-align: center;
-        background-color: grey;
-            }
-        </style>
-    </head>
-    <body>
-        {% for key, value in result.items() %}
+{% extends "base.html" %}
+ {% block title %}Response{% endblock title %}
 
-            <p> {{ key }} : {{ value }} </p>
-
-        {% endfor %}
-    </body>
-
-</html>
+<div class ="container-fluid">
+    {% block content %}
+<div class ="alert alert-info"><i>{{ response }}</i></div>
+{% endblock content %}
+</div>
