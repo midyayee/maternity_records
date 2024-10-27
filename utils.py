@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import hashlib
 import settings
 from flask_mail import Mail, Message

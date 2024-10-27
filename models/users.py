@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import enum
 from sqlalchemy import Boolean, DateTime, Integer, String, func
 from sqlalchemy.orm import mapped_column, Mapped

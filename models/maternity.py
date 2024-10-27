@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import enum
 from typing import Optional
 from sqlalchemy import DateTime, Integer, String, func, ForeignKey

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import random
 import string
 import hashlib
@@ -106,4 +107,6 @@ def logout():
      return render_template('response.html', response="Logged out successfully")
      
 if __name__ == '__main__':
+     #activate the environment
+     
      app.run(port =8080, debug=True)
