@@ -34,7 +34,7 @@ def register_user(engine, email, role, code):
             insert_data(engine, table=users.User, email=enc_email, role=role, code=code)
             send_mail(email=email, sender ="accounts@schoolofprogramming.online",
                     subject="Activate your account",
-                    body=f"Click on this link to activate your account: http://{settings.dbhost}:8080/activate?email={email}&code={code}")
+                    body=f"Click on this link to activate your account: http://{settings.dbhost}/activate?email={email}&code={code}")
             return True
 
 def update_password(engine, code, user_password):
