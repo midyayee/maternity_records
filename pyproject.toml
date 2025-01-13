@@ -13,6 +13,7 @@ pymysql = "^1.1.1"
 flask-simple-crypt = "^0.3.3"
 flask-mail = "^0.10.0"
 python-dotenv = "^1.0.1"
+gunicorn = "^23.0.0"
 
 
 [build-system]
