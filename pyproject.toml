@@ -3,7 +3,7 @@ name = "maternity-records"
 version = "0.1.0"
 description = "Pregnancy registration and Maternity information Tracking"
 authors = ["mildredfakoya <luvlyayee@gmail.com>"]
-readme = "README.md"
+#readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"

@@ -15,7 +15,7 @@ from flask_mail import Mail
 def create_app()->Flask:
      app = Flask(__name__)
      app.secret_key = settings.secret_key
-     app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{settings.dbuser}:@{settings.dbhost}/{settings.dbname}'
+     app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{settings.dbuser}:{settings.dbpassword}@{settings.dbhost}/{settings.dbname}'
      app.config['MAIL_SERVER'] = 'mail.privateemail.com'
      app.config['MAIL_PORT'] = 465
      app.config['MAIL_USE_TLS'] = False
