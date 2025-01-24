@@ -3,13 +3,11 @@ import random
 import string
 import hashlib
 import settings
-from utils import register_user, update_password, user_login, get_role
+from utils import register_user, update_password, user_login, get_role, register_clients
 from flask import Flask, render_template, request, session
 from sqlalchemy import create_engine
 from models import Base
 from flask_mail import Mail
-
-
 
 
 def create_app()->Flask:
@@ -106,3 +104,33 @@ def logout():
      session.pop('role', None)
      return render_template('response.html', response="Logged out successfully")
      
+@app.route('/clients', methods=['POST', 'GET'])
+def clients():
+     if request.method == 'GET':
+          patient_num = 'abc123'
+          first_name = 'John'
+          middle_name = 'Doe'
+          family_name = 'Smith'
+          date_of_birth = '1990-01-01'
+          street_address = '123 Main St'
+          city = 'Anytown'
+          state = 'CA'
+          zip_code = '12345'
+          phone_number = '123-456-7890'
+          email = 'j.smith@test.com'
+          emergency_contact_name = 'Jane Smith'
+          emergency_contact_phone = '098-765-4321'
+          emergency_contact_relation = 'Sister'
+          emergency_contact_address = '456 Elm St'
+          if register_clients(create_engine(app.config['SQLALCHEMY_DATABASE_URI'], echo=True), patient_num, first_name, middle_name, family_name,
+                               date_of_birth, street_address, city, state, zip_code, phone_number, email,
+                                 emergency_contact_name, emergency_contact_phone, emergency_contact_relation, 
+                                 emergency_contact_address):
+               response = "Client registered successfully"
+               return render_template('response.html', response=response)
+          else:
+               response = "Client already exists"
+               return render_template('response.html', response=response)
+
+          #form_data = request.form
+          #patient_num = form_data.get('patient_num')
